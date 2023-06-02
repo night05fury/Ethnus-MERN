@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Task 8</title>
+    <style>
+        @keyframes move {
+            0% {
+                margin-left: 0px;
+            }
+
+            100% {
+                margin-left: 500px;
+            }
+        }
+
+        #im {
+            animation: move 10s linear;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin-left: 400px; margin-top: 300px;">
+        <img id="im" src="train.png" alt="" style="height: 200px; background-color: aqua;"><br /><br />
+        <h1 style="color: darkblue;">Click the following buttons to handle animation</h1>
+        <div style="margin-left: 300px;">
+            <button onclick="start()">Start</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        function start() {
+            document.getElementById("im").style.animationPlayState = 'running'
+        }
+        function stop() {
+            document.getElementById("im").style.animationPlayState = 'paused'
+        }
+    </script>
+</body>
+
+</html>
